@@ -28,8 +28,9 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="黑夜中的潜行者" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body>
     <header class="navbar-fixed">
@@ -320,7 +321,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
+                        strings: ['从来没有真正的绝境, 只有心灵的迷途', 'Never really desperate, only the lost of the soul'],
                         startDelay: 300,
                         typeSpeed: 100,
                         loop: true,
@@ -341,7 +342,6 @@
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
-
     </div>
 </div>
 
@@ -352,25 +352,7 @@
                 <div class="tag-title center-align">
                     <i class="fas fa-comments"></i>&nbsp;&nbsp;留言板
                 </div>
-                <script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+                
             </div>
         </div>
         <div class="card">
@@ -601,6 +583,36 @@ $(function () {
     <!--动态线条背景-->
     <script type="text/javascript" color="122 103 238" opacity='0.7' zIndex="-2" count="200"
         src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+    <script type="text/javascript">
+        /* 社会主义鼠标点击特效 - 7Core.CN */
+        var a_idx = 0; jQuery(document).ready(function ($) {
+            $("body").click(function (e) {
+                var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善"); var $i = $("<span/>").text(a[a_idx]);
+                a_idx = (a_idx + 1) % a.length; var x = e.pageX, y = e.pageY; $i.css({ "z-index": 100000000, "top": y - 20, "left": x, "position": "absolute", "font-weight": "bold", "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")" }); $("body").append($i); $i.animate({ "top": y - 180, "opacity": 0 }, 1500, function () { $i.remove(); });
+            });
+        });
+    </script>
+
+    <!--浏览器搞笑标题-->
+    <script>
+        var OriginTitle = document.title;
+        var titleTime;
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/favicon.png");
+                document.title = 'ヽ(●-`Д´-)ノ你要玩捉迷藏嘛';
+                clearTimeout(titleTime);
+            }
+            else {
+                $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/favicon.png");
+                document.title = 'ヾ(Ő∀Ő3)ノ好哦！' + OriginTitle;
+                titleTime = setTimeout(function () {
+                    document.title = OriginTitle;
+                }, 2000);
+            }
+        });
+    </script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>
